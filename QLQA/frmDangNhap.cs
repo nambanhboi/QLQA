@@ -44,11 +44,10 @@ namespace QLQA
                 this.Hide();
                 frmHeThong frm = new frmHeThong();
                 frm.Show();
-                MessageBox.Show(AppGlobal.IsAdmin.ToString());
             }
             else
             {
-                MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!");
+                MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!!");
             }
         }
     }
