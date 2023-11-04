@@ -15,7 +15,7 @@ namespace QLQA
         public frmHeThong()
         {
             InitializeComponent();
-            if(!AppGlobal.IsAdmin)
+            if (!AppGlobal.IsAdmin)
             {
                 btnQltt.Visible = false;
             }

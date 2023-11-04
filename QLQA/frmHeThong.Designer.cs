@@ -31,11 +31,12 @@
             btnQlba = new Button();
             btnQltt = new Button();
             label1 = new Label();
+            btnThongKe = new Button();
             SuspendLayout();
             // 
             // btnQlba
             // 
-            btnQlba.Location = new Point(288, 255);
+            btnQlba.Location = new Point(184, 241);
             btnQlba.Name = "btnQlba";
             btnQlba.Size = new Size(139, 50);
             btnQlba.TabIndex = 0;
@@ -62,11 +63,21 @@
             label1.TabIndex = 1;
             label1.Text = "label1";
             // 
+            // btnThongKe
+            // 
+            btnThongKe.Location = new Point(387, 245);
+            btnThongKe.Name = "btnThongKe";
+            btnThongKe.Size = new Size(151, 46);
+            btnThongKe.TabIndex = 2;
+            btnThongKe.Text = "Thống kê";
+            btnThongKe.UseVisualStyleBackColor = true;
+            // 
             // frmHeThong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnThongKe);
             Controls.Add(label1);
             Controls.Add(btnQltt);
             Controls.Add(btnQlba);
@@ -81,5 +92,6 @@
         private Button btnQlba;
         private Button btnQltt;
         private Label label1;
+        private Button btnThongKe;
     }
 }
