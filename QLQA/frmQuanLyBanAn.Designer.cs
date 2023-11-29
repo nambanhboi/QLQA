@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             groupBox2 = new GroupBox();
-            nudSoLuongMon = new NumericUpDown();
             dgvDanhSachMon = new DataGridView();
+            nudSoLuongMon = new NumericUpDown();
             btnXoaMon = new Button();
             btnThemMon = new Button();
             cbMon = new ComboBox();
@@ -48,9 +48,10 @@
             btnChuyenBan = new Button();
             groupBox4 = new GroupBox();
             flpBan = new FlowLayoutPanel();
+            btnDong = new Button();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nudSoLuongMon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachMon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudSoLuongMon).BeginInit();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudSale).BeginInit();
             groupBox4.SuspendLayout();
@@ -58,8 +59,8 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(nudSoLuongMon);
             groupBox2.Controls.Add(dgvDanhSachMon);
+            groupBox2.Controls.Add(nudSoLuongMon);
             groupBox2.Controls.Add(btnXoaMon);
             groupBox2.Controls.Add(btnThemMon);
             groupBox2.Controls.Add(cbMon);
@@ -68,19 +69,11 @@
             groupBox2.Size = new Size(603, 597);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
-            // 
-            // nudSoLuongMon
-            // 
-            nudSoLuongMon.Location = new Point(295, 32);
-            nudSoLuongMon.Name = "nudSoLuongMon";
-            nudSoLuongMon.Size = new Size(55, 27);
-            nudSoLuongMon.TabIndex = 5;
             // 
             // dgvDanhSachMon
             // 
             dgvDanhSachMon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDanhSachMon.Location = new Point(25, 87);
+            dgvDanhSachMon.Location = new Point(9, 87);
             dgvDanhSachMon.Name = "dgvDanhSachMon";
             dgvDanhSachMon.RowHeadersWidth = 51;
             dgvDanhSachMon.RowTemplate.Height = 29;
@@ -88,13 +81,20 @@
             dgvDanhSachMon.TabIndex = 3;
             dgvDanhSachMon.CellClick += dvgDanhSachMon_CellClick;
             // 
+            // nudSoLuongMon
+            // 
+            nudSoLuongMon.Location = new Point(295, 32);
+            nudSoLuongMon.Name = "nudSoLuongMon";
+            nudSoLuongMon.Size = new Size(55, 27);
+            nudSoLuongMon.TabIndex = 1;
+            // 
             // btnXoaMon
             // 
             btnXoaMon.FlatStyle = FlatStyle.Popup;
             btnXoaMon.Location = new Point(489, 32);
             btnXoaMon.Name = "btnXoaMon";
             btnXoaMon.Size = new Size(92, 29);
-            btnXoaMon.TabIndex = 2;
+            btnXoaMon.TabIndex = 3;
             btnXoaMon.Text = "Xóa món";
             btnXoaMon.UseVisualStyleBackColor = true;
             btnXoaMon.Click += btnXoaMon_Click;
@@ -136,14 +136,13 @@
             groupBox3.Size = new Size(185, 597);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
-            groupBox3.Text = "groupBox3";
             // 
             // nudSale
             // 
             nudSale.Location = new Point(20, 331);
             nudSale.Name = "nudSale";
             nudSale.Size = new Size(125, 27);
-            nudSale.TabIndex = 5;
+            nudSale.TabIndex = 7;
             nudSale.ValueChanged += nudSale_ValueChanged;
             // 
             // label14
@@ -160,14 +159,14 @@
             txtTamTinh.Location = new Point(20, 271);
             txtTamTinh.Name = "txtTamTinh";
             txtTamTinh.Size = new Size(125, 27);
-            txtTamTinh.TabIndex = 8;
+            txtTamTinh.TabIndex = 6;
             // 
             // txtTongTien
             // 
             txtTongTien.Location = new Point(20, 416);
             txtTongTien.Name = "txtTongTien";
             txtTongTien.Size = new Size(125, 27);
-            txtTongTien.TabIndex = 7;
+            txtTongTien.TabIndex = 8;
             // 
             // label13
             // 
@@ -211,14 +210,14 @@
             cbBan.Location = new Point(20, 90);
             cbBan.Name = "cbBan";
             cbBan.Size = new Size(125, 28);
-            cbBan.TabIndex = 5;
+            cbBan.TabIndex = 4;
             // 
             // btnThanhToan
             // 
             btnThanhToan.Location = new Point(20, 506);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(125, 64);
-            btnThanhToan.TabIndex = 4;
+            btnThanhToan.TabIndex = 9;
             btnThanhToan.Text = "Thanh Toán";
             btnThanhToan.UseVisualStyleBackColor = true;
             btnThanhToan.Click += btnThanhToan_Click;
@@ -228,7 +227,7 @@
             btnChuyenBan.Location = new Point(20, 128);
             btnChuyenBan.Name = "btnChuyenBan";
             btnChuyenBan.Size = new Size(125, 64);
-            btnChuyenBan.TabIndex = 4;
+            btnChuyenBan.TabIndex = 5;
             btnChuyenBan.Text = "Chuyển bàn";
             btnChuyenBan.UseVisualStyleBackColor = true;
             btnChuyenBan.Click += btnChuyenBan_Click;
@@ -241,7 +240,6 @@
             groupBox4.Size = new Size(472, 597);
             groupBox4.TabIndex = 3;
             groupBox4.TabStop = false;
-            groupBox4.Text = "groupBox4";
             // 
             // flpBan
             // 
@@ -250,20 +248,32 @@
             flpBan.Size = new Size(445, 540);
             flpBan.TabIndex = 0;
             // 
+            // btnDong
+            // 
+            btnDong.Location = new Point(12, 629);
+            btnDong.Name = "btnDong";
+            btnDong.Size = new Size(1268, 34);
+            btnDong.TabIndex = 10;
+            btnDong.Text = "Thoát";
+            btnDong.UseVisualStyleBackColor = true;
+            btnDong.Click += btnDong_Click;
+            // 
             // frmQuanLyBanAn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1292, 663);
+            ClientSize = new Size(1292, 675);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
+            Controls.Add(btnDong);
             Controls.Add(groupBox2);
             Name = "frmQuanLyBanAn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmQuanLyBanAn";
             Load += frmQuanLyBanAn_Load;
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)nudSoLuongMon).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachMon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudSoLuongMon).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudSale).EndInit();
@@ -312,5 +322,6 @@
         private NumericUpDown nudSoLuongMon;
         private NumericUpDown nudSale;
         private Button btnXoaMon;
+        private Button btnDong;
     }
 }

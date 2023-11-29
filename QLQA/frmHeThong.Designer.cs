@@ -28,27 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHeThong));
             btnQlba = new Button();
             btnQltt = new Button();
             label1 = new Label();
             btnThongKe = new Button();
+            btnPn = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // btnQlba
             // 
-            btnQlba.Location = new Point(184, 241);
+            btnQlba.Location = new Point(207, 410);
             btnQlba.Name = "btnQlba";
             btnQlba.Size = new Size(139, 50);
-            btnQlba.TabIndex = 0;
+            btnQlba.TabIndex = 1;
             btnQlba.Text = "Quản lý bàn ăn";
             btnQlba.UseVisualStyleBackColor = true;
             btnQlba.Click += btnQlba_Click;
             // 
             // btnQltt
             // 
-            btnQltt.Location = new Point(288, 174);
+            btnQltt.Location = new Point(693, 242);
             btnQltt.Name = "btnQltt";
-            btnQltt.Size = new Size(139, 50);
+            btnQltt.Size = new Size(151, 50);
             btnQltt.TabIndex = 0;
             btnQltt.Text = "Quản lý thông tin";
             btnQltt.UseVisualStyleBackColor = true;
@@ -57,32 +60,60 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(325, 95);
+            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(693, 73);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(142, 37);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "Trang chủ";
             // 
             // btnThongKe
             // 
-            btnThongKe.Location = new Point(387, 245);
+            btnThongKe.Location = new Point(693, 415);
             btnThongKe.Name = "btnThongKe";
             btnThongKe.Size = new Size(151, 46);
             btnThongKe.TabIndex = 2;
             btnThongKe.Text = "Thống kê";
             btnThongKe.UseVisualStyleBackColor = true;
+            btnThongKe.Click += btnThongKe_Click;
+            // 
+            // btnPn
+            // 
+            btnPn.Location = new Point(1123, 415);
+            btnPn.Name = "btnPn";
+            btnPn.Size = new Size(139, 48);
+            btnPn.TabIndex = 3;
+            btnPn.Text = "Phiếu nhập";
+            btnPn.UseVisualStyleBackColor = true;
+            btnPn.Click += btnPn_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(1285, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(151, 46);
+            button2.TabIndex = 4;
+            button2.Text = "Đăng xuất";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // frmHeThong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1467, 738);
+            Controls.Add(button2);
             Controls.Add(btnThongKe);
             Controls.Add(label1);
+            Controls.Add(btnPn);
             Controls.Add(btnQltt);
             Controls.Add(btnQlba);
             Name = "frmHeThong";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmHeThong";
+            Load += frmHeThong_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,5 +124,7 @@
         private Button btnQltt;
         private Label label1;
         private Button btnThongKe;
+        private Button btnPn;
+        private Button button2;
     }
 }

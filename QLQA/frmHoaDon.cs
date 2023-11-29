@@ -41,8 +41,14 @@ namespace QLQA
             cbNhanVienLap.ValueMember = "MaNhanVien";
             //
             dgvDanhSachMon.DataSource = monAnHoaDons;
+            dgvDanhSachMon.Columns["MaMon"].Visible = false;
+            dgvDanhSachMon.Columns["TenMon"].HeaderText = "Tên món";
+            dgvDanhSachMon.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvDanhSachMon.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgvDanhSachMon.Columns["ThanhTien"].HeaderText = "Thành tiền";
+
             txtBan.Text = TenBan;
-            txtNgayLap.Text = DateTime.Now.ToString();
+            txtNgayLap.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
             txtSales.Text = Sale;
             txtTongTien.Text = TongTien;
             txtThanhTien.Text = ThanhTien;
@@ -62,11 +68,11 @@ namespace QLQA
                 return;
             }
             var idhd = Guid.NewGuid().ToString();
-            string ngayFormat = txtNgayLap.Text.Substring(0, txtNgayLap.Text.Length - 3);
+            string ngayFormat = txtNgayLap.Text;
             var query_hd = string.Format("insert into HoaDon " +
-                "values ('{0}', '{1}', '{2}', NUll, '{3}', '{4}', {5})",
-                idhd, ngayFormat, MaBan, txtTenKhachHang.Text, txtSoDienThoai.Text, ThanhTien);
-            if(!kn.ThucThi(query_hd))
+                "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6})",
+                idhd, ngayFormat, MaBan, cbNhanVienLap.SelectedValue, txtTenKhachHang.Text, txtSoDienThoai.Text, ThanhTien);
+            if (!kn.ThucThi(query_hd))
             {
                 MessageBox.Show("Thanh toán thất bại!");
                 return;
@@ -81,7 +87,7 @@ namespace QLQA
                     idcthd, idhd, x.MaMon, x.SoLuong) + (index == monAnHoaDons.Count - 1 ? "" : ",");
                 index++;
             });
-            if(!kn.ThucThi(query_cthd))
+            if (!kn.ThucThi(query_cthd))
             {
                 MessageBox.Show("Thanh toán thất bại!");
                 return;
@@ -92,7 +98,7 @@ namespace QLQA
             {
                 ThanhToanThanhCong(this, EventArgs.Empty);
             }
-            this.Hide();            
+            this.Hide();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

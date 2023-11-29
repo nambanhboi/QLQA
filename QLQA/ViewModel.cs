@@ -39,4 +39,14 @@ namespace QLQA
         public float DonGia { get; set; }
         public float ThanhTien { get; set; }
     }
+    public class NguyenLieuPhieuNhap
+    {
+        public string MaNCC { get; set; }
+        public string TenNCC { get; set; }
+        public string TenNguyenLieu { get; set; }
+        public string DiaChi { get; set; }
+        public string Sdt { get; set; }
+        public int SoLuong { get; set; }
+        public float DonGia { get; set; }
+    }
 }

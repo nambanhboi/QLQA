@@ -84,7 +84,7 @@ namespace QLQA
             }
 
             // lấy ra danh sách các món đổ vào cb món
-            var queryMon = "select * from Mon where TinhTrang = 1";
+            var queryMon = "select * from Mon";
             DataTable tbmon = new DataTable();
             tbmon = kn.LayDuLieu(queryMon);
             cbMon.DataSource = tbmon;
@@ -107,6 +107,10 @@ namespace QLQA
         public void getDgvDanhSachMon()
         {
             dgvDanhSachMon.DataSource = danhSachBanAn[curentIndexBan].DanhSachMonAns;
+            dgvDanhSachMon.Columns["MaMon"].Visible = false;
+            dgvDanhSachMon.Columns["TenMon"].HeaderText = "Tên món";
+            dgvDanhSachMon.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvDanhSachMon.Columns["DonGia"].HeaderText = "Đơn giá";
         }
         // sự kiện click thêm món
         private void btnThemMon_Click(object sender, EventArgs e)
@@ -246,7 +250,13 @@ namespace QLQA
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            if (danhSachBanAn[curentIndexBan].DanhSachMonAns.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn món!");
+                return;
+            }
             frmHoaDon frm = new frmHoaDon();
+            frm.MdiParent = this;
             frm.MaBan = danhSachBanAn[curentIndexBan].MaBan;
             frm.TenBan = danhSachBanAn[curentIndexBan].TenBan;
             frm.TongTien = txtTamTinh.Text;
@@ -273,6 +283,18 @@ namespace QLQA
         private void Frm_ThanhToanThanhCong(object sender, EventArgs e)
         {
             ClearMon();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát và không lưu không?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                frmHeThong frm = new frmHeThong();
+                this.Hide();
+                frm.Show();
+            }
         }
     }
 

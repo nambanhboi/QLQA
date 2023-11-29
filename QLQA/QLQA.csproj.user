@@ -10,10 +10,19 @@
     <Compile Update="frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmTaoPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQuanLyBanAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanLyThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

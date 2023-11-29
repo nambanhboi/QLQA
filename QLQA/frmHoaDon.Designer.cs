@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             txtBan = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -92,15 +93,15 @@
             // txtNgayLap
             // 
             txtNgayLap.Enabled = false;
-            txtNgayLap.Location = new Point(699, 134);
+            txtNgayLap.Location = new Point(664, 134);
             txtNgayLap.Name = "txtNgayLap";
-            txtNgayLap.Size = new Size(125, 27);
+            txtNgayLap.Size = new Size(160, 27);
             txtNgayLap.TabIndex = 0;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(592, 137);
+            label4.Location = new Point(555, 134);
             label4.Name = "label4";
             label4.Size = new Size(69, 20);
             label4.TabIndex = 1;
@@ -111,7 +112,7 @@
             txtTenKhachHang.Location = new Point(208, 218);
             txtTenKhachHang.Name = "txtTenKhachHang";
             txtTenKhachHang.Size = new Size(240, 27);
-            txtTenKhachHang.TabIndex = 0;
+            txtTenKhachHang.TabIndex = 1;
             // 
             // label5
             // 
@@ -198,14 +199,14 @@
             cbNhanVienLap.Location = new Point(208, 177);
             cbNhanVienLap.Name = "cbNhanVienLap";
             cbNhanVienLap.Size = new Size(220, 28);
-            cbNhanVienLap.TabIndex = 3;
+            cbNhanVienLap.TabIndex = 0;
             // 
             // txtSoDienThoai
             // 
             txtSoDienThoai.Location = new Point(699, 221);
             txtSoDienThoai.Name = "txtSoDienThoai";
             txtSoDienThoai.Size = new Size(125, 27);
-            txtSoDienThoai.TabIndex = 0;
+            txtSoDienThoai.TabIndex = 2;
             // 
             // label10
             // 
@@ -221,7 +222,7 @@
             btnThanhToan.Location = new Point(499, 601);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(125, 39);
-            btnThanhToan.TabIndex = 4;
+            btnThanhToan.TabIndex = 3;
             btnThanhToan.Text = "Thanh Toán";
             btnThanhToan.UseVisualStyleBackColor = true;
             btnThanhToan.Click += btnThanhToan_Click;
@@ -240,6 +241,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(933, 670);
             Controls.Add(btnHuy);
             Controls.Add(btnThanhToan);
@@ -263,6 +266,7 @@
             Controls.Add(txtTongTien);
             Controls.Add(txtBan);
             Name = "frmHoaDon";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmHoaDon";
             Load += frmHoaDon_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachMon).EndInit();

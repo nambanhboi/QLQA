@@ -33,5 +33,32 @@ namespace QLQA
             frmQuanLyBanAn frm = new frmQuanLyBanAn();
             frm.Show();
         }
+
+        private void frmHeThong_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDangNhap frm = new frmDangNhap();
+            AppGlobal.IsAdmin = false;
+            frm.Show();
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKe frm = new frmThongKe();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void btnPn_Click(object sender, EventArgs e)
+        {
+            frmTaoPhieuNhap frm = new frmTaoPhieuNhap();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

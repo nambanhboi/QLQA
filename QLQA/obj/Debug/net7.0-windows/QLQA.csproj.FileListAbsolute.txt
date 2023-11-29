@@ -99,3 +99,7 @@ D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.pdb
 D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.genruntimeconfig.cache
 D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\ref\QLQA.dll
 D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.frmHoaDon.resources
+D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.frmThongKe.resources
+D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.frmPhieuNhap.resources
+D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.frmTaoPhieuNhap.resources
+D:\code\.net\đồ án net\QLQA\QLQA\obj\Debug\net7.0-windows\QLQA.Properties.Resources.resources
